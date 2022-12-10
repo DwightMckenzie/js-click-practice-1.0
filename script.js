@@ -56,7 +56,7 @@ function incBrdr() {
 	if (!btnDec.hasAttribute('onclick')) {
 		btnDec.setAttribute('onclick', 'decBrdr()');
 	}
-
+	
 	if (crntBrdr === 10) {
 		// console.log('yes');
 		
@@ -110,98 +110,6 @@ function addRadius() {
 	btnRad.textContent === 'Add Radius' ? divFive.style.borderRadius = '50px' : divFive.style.borderRadius = '0px';
 	btnRad.textContent === 'Add Radius' ? btnRad.innerHTML = 'Remove Radius' : btnRad.innerHTML = 'Add Radius';
 }
-
-/* Dial Rotation
--------------------------------------------------------------------*/
-let dial = document.querySelector('.dial');
-let digiDsply = document.querySelector('.display');
-let newDeg = '';
-
-function rotate(e) {
-	let btnDeg = e.value;
-	let oprtr = '';
-	let degIncr = 5;
-
-	// set button selection
-	btnDeg === "1" ? oprtr = "+" : oprtr = "-";
-
-	// get current degree
-	let crntRotVal = dial.style.getPropertyValue("transform");
-	
-	// strip declaration value to just a number
-	let crntRotNum = crntRotVal.replace(/([a-z(\*)])/g, "");
-
-	// convert to number
-	let newRotNum = window.eval(parseFloat(crntRotNum) + oprtr + degIncr);
-
-	// merge number into declaration value
-	newDeg = `rotate(${newRotNum}deg)`;
-
-	// apply new deg to object
-	dial.style.transform = newDeg;
-
-	// set digital display
-	digiDsply.children[0].innerHTML = newRotNum;
-
-};
-
-/* Controlling Direction of Div
--------------------------------------------------------------------*/
-const btnDir = document.querySelectorAll('.btn-dir');
-
-function moveDirect(elm) {
-	const pad = document.querySelector('.dir-pad-wrppr');
-	const padPosition = pad.getBoundingClientRect();
-
-	let dir = elm.target.value;
-	let padPosX = padPosition.left;
-	let padPosY = padPosition.top;
-
-	switch (dir) {
-		case 'left':
-			console.log('left');
-			pad.style.transform = 'translateX(-50px)';
-			// console.log('x: ', padPosition.left);
-		break;
-		case 'right':
-			console.log('right');
-			pad.style.transform = 'translateX(50px)';
-			// console.log('x: ', padPosition.right);
-		break;
-		case 'up':
-			console.log('up');
-			pad.style.transform = 'translateY(-50px)';	
-			// console.log('Neg y: ', padPosY);
-		break;
-		case 'down':
-			console.log('down');
-			pad.style.transform = 'translateY(50px)';
-			// console.log('Pos y: ', padPosition.bottom);
-		break;
-		case 'center':
-			console.log('center');
-			if (padPosX < 50) {
-				pad.style.transform = 'translateX(50%)';
-			}
-			if (padPosX > 50) {
-				pad.style.transform = 'translateX(50%)';
-			}
-			if (padPosY >= 347) {
-				pad.style.transform = 'translateX(50%)';
-			}
-			if (padPosY >= 347) {
-				pad.style.transform = 'translateX(50%)';
-			}
-		break;
-		default:
-		break;
-	}
-	
-}
-
-btnDir.forEach((elm) => {
-	elm.addEventListener('click', moveDirect);
-});
 
 /* image size
 -------------------------------------------------------------------*/
