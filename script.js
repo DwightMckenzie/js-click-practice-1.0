@@ -41,8 +41,6 @@ let btnBrdr = document.querySelectorAll('.btn-brdr');
 let brdrPx = 1;
 let crntBrdr = 0;
 
-// https://stackoverflow.com/questions/2664045/how-to-get-an-html-elements-style-values-in-javascript
-
 function incBrdr() {
 	// console.log('inc');
 	crntBrdr = brdrPx++;
@@ -58,10 +56,6 @@ function incBrdr() {
 	if (!btnDec.hasAttribute('onclick')) {
 		btnDec.setAttribute('onclick', 'decBrdr()');
 	}
-
-	// NOT NEEDED BUT SAVE THIS FOR THE MOMENT
-	// let style = getComputedStyle(divFour);
-	// console.log(style.border);
 
 	if (crntBrdr === 10) {
 		// console.log('yes');
@@ -151,71 +145,6 @@ function rotate(e) {
 
 };
 
-// function () {
-	
-// 	// Rot to 45º
-// 	if (dial.style.transform === '') {
-// 		dial.style.transform = 'rotate(45deg)';
-// 		//dial.style.borderRadius = '0px 0px 100px 0px'; //TL, TR, BR, BL
-// 		rotateDivPos.firstChild.data = 'Rot to +90º';
-// 		currentDeg.firstChild.data = '+ 045º';
-// 	}
-// 	// Rot to 90º	
-// 	else if (dial.style.transform === 'rotate(45deg)') {
-// 		dial.style.transform = 'rotate(90deg)';
-// 		//dial.style.borderRadius = '0px 0px 0px 0px'; //TL, TR, BR, BL
-// 		rotateDivPos.firstChild.data = 'Rot to +135º';
-// 		currentDeg.firstChild.data = '+ 090º';
-// 	}
-// 	// Rot to 135º
-// 	else if (dial.style.transform === 'rotate(90deg)') {
-// 		dial.style.transform = 'rotate(135deg)';
-// 		//dial.style.borderRadius = '0px 100px 0px 0px'; //TL, TR, BR, BL
-// 		rotateDivPos.firstChild.data = 'Rot to +180º';
-// 		currentDeg.firstChild.data = '+ 135º';
-// 	}
-// 	// Rot to 180º
-// 	else if (dial.style.transform === 'rotate(135deg)') {
-// 		dial.style.transform = 'rotate(180deg)';
-// 		//dial.style.borderRadius = '0px 0px 0px 0px'; //TL, TR, BR, BL
-// 		rotateDivPos.firstChild.data = 'Rot to +225º';
-// 		currentDeg.firstChild.data = '+ 180º';
-// 	}
-// 	// Rot to 225º
-// 	else if (dial.style.transform === 'rotate(180deg)') {
-// 		dial.style.transform = 'rotate(225deg)';
-// 		//dial.style.borderRadius = '100px 0px 0px 0px'; //TL, TR, BR, BL
-// 		rotateDivPos.firstChild.data = 'Rot to +270º';
-// 		currentDeg.firstChild.data = '+ 225º';
-// 	}
-// 	// Rot to 270º
-// 	else if (dial.style.transform === 'rotate(225deg)') {
-// 		dial.style.transform = 'rotate(270deg)';
-// 		//dial.style.borderRadius = '0px 0px 0px 0px'; //TL, TR, BR, BL
-// 		rotateDivPos.firstChild.data = 'Rot to +315º';
-// 		currentDeg.firstChild.data = '+ 270º';
-// 	}
-// 	// Rot to 315º
-// 	else if (dial.style.transform === 'rotate(270deg)') {
-// 		dial.style.transform = 'rotate(315deg)';
-// 		//dial.style.borderRadius = '0px 0px 0px 100px'; //TL, TR, BR, BL
-// 		rotateDivPos.firstChild.data = 'Rot to +360º';
-// 		currentDeg.firstChild.data = '+ 315º';
-// 	}
-// 	// Rot to 360º (actually 0º)
-// 	else if (dial.style.transform === 'rotate(315deg)') {
-// 		dial.style.transform = '';
-// 		//dial.style.borderRadius = '0px 0px 0px 0px'; //TL, TR, BR, BL
-// 		rotateDivPos.firstChild.data = 'Rot to +45º';
-// 		currentDeg.firstChild.data = '000º';
-// 	}
-// 	// Reset
-// 	else {
-// 		dial.style.transform === '';
-// 		currentDeg.firstChild.data = '000º';
-// 	}
-// };
-
 /* Controlling Direction of Div
 -------------------------------------------------------------------*/
 const btnDir = document.querySelectorAll('.btn-dir');
@@ -273,44 +202,6 @@ function moveDirect(elm) {
 btnDir.forEach((elm) => {
 	elm.addEventListener('click', moveDirect);
 });
-
-// keep original
-// const btnUp = document.querySelector('button[data-direct=up]');
-// const btnDown = document.querySelector('button[data-direct=down]');
-// const btnLeft = document.querySelector('button[data-direct=left]');
-// const btnRight = document.querySelector('button[data-direct=right]');
-// const btnCenter = document.querySelector('button[data-direct=center]');
-// const div = document.querySelector('.div-7-wrppr');
-// const divPosition = div.getBoundingClientRect();
-
-// let divPosX = divPosition.left;
-// let divPosY = divPosition.top;
-
-// btnUp.onclick = function () {
-// 	div.style.transform = 'translateY(-500px)';	
-// 	console.log('Neg y: ', divPosY);
-// }
-
-// btnDown.onclick = function () {
-// 	div.style.transform = 'translateY(500px)';
-// 	console.log('Pos y: ', divPosition.bottom);
-// }
-
-// btnRight.onclick = function () {
-// 	div.style.transform = 'translateX(500px)';
-// 	console.log('x: ', divPosition.right);
-// }
-
-// btnLeft.onclick = function () {
-// 	div.style.transform = 'translateX(-500px)';
-// 	console.log('x: ', divPosition.left);
-// }
-
-// btnCenter.onclick = function () {
-// 	if (divPosY >= 347) {
-// 		div.style.transform = 'translate(347px)';
-// 	}	
-// }
 
 /* image size
 -------------------------------------------------------------------*/
