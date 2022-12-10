@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Blank Folder 1.0</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link rel="icon" type="image/png" href="dm_favicon.png">
+		<link href="style-1.1.css" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<div class="container" id="contaienr">
+			<!-- Show and Hide Div -->
+			<div class="row">
+				<h5>Show Hide Div</h5>
+				<hr>
+				<div class="fx div div-1" id="div-1"></div>
+				<button type="button" class="btn-show" onclick="showDiv()">Show Div</button>
+			</div>
+			<!-- Add and Remove Color of Div -->
+			<div class="row">
+				<h5>Change fille color</h5>
+				<hr>
+				<div class="fx div div-2" id="div-2"></div>
+				<button type="button" class="btn-color" onclick="colorDiv()">Change Color</button>
+			</div>
+			<!-- Move div Left and Right -->
+			<div class="row">
+				<h5>Change div Justify</h5>
+				<hr>
+				<div class="div-3-container">
+					<div class="div-3-wrppr">
+						<div class="div div-3" id="div-3"></div>
+						<button type="button" class="btn btn-move" onclick="floatDiv()">Right</button>
+					</div>
+				</div>
+			</div>
+			<!-- increase decrease Border -->
+			<div class="row">
+				<h5>Add Border</h5>
+				<hr>
+				<div class="fx div div-4" id="div-4"></div>
+				<button type="button" class="btn btn-brdr btn-inc" onclick="incBrdr()">+</button>
+				<button type="button" class="btn btn-brdr btn-dec" onclick="decBrdr()">-</button>
+			</div>
+			<!-- Add and Remove Radius -->
+			<div class="row">
+				<h5>Add Radius</h5>
+				<hr>
+				<div class="fx div div-5" id="div-5"></div>
+				<button type="button" class="btn btn-rad" onclick="addRadius()">Add Radius</button>
+			</div>
+			<!-- Turn dial on click -->
+			<div class="row">
+				<h5>Change Degree</h5>
+				<hr>
+				<div class="div-6-wrppr" id="div-6-wrppr">
+					<div class="dialbox" id="dialbox" class="">					
+						<div class="display" id="display"><span>000</span>º</div>
+						<div class="dial" id="dial" style="transform: rotate(0deg);">
+							<div class="dot" id="dot"></div>
+						</div>
+						<div class="dial-cntrl" id="dial-cntrl">
+							<button type="button" onclick="rotate(this)" value=-1>-</button>
+							<button type="button" onclick="rotate(this)" value=1>+</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Control direction -->
+			<div class="row">
+				<h5>Control Direction</h5>
+				<hr>
+				<div class="div-7-container" id="div-7-container">
+					<div class="dir-pad-wrppr" id="dir-pad-wrppr">
+						<table class="dir-pad" id="dir-pad">
+							<tbody>
+								<tr>
+									<td></td>
+									<td><button class="btn-dir" value="up">&uarr;</button></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><button class="btn-dir" value="left">&larr;</button></td>
+									<td><button class="btn-dir" value="center">0</button></td>
+									<td><button class="btn-dir" value="right">&rarr;</button></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><button class="btn-dir" value="down">&darr;</button></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- Change picture size -->
+			<div class="row">
+				<h5>Increase Picture</h5>
+				<hr>
+				<div class="div-8-wrppr" id="div-8-wrppr">
+					<!-- <div id="img-frme"></div> -->
+					<div class="fx img-frme" id="img-frme"></div>
+					<!-- <button type="button" class="btn-size" id="btn-size">Increase Size</button> -->
+				</div>
+			</div>
+			<!-- add subtract div -->
+			<!-- <div class="row">
+				<h5>Add Square</h5>
+				<hr>
+				<div id="div-9-wrppr">
+					<div class="div"><span>0</span></div>
+				</div>
+				<button class="btn" onclick="square(this)" data-cmd="pos">Add Square</button>
+				<button class="btn" onclick="square(this)" data-cmd="neg">Sub Square</button>
+			</div> -->
+		</div>
+		<script src="script-1.1.js" type="text/javascript"></script>	
+	</body>
+</html>

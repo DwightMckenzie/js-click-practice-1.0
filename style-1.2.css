@@ -1,0 +1,171 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background-color: #efefef;
+	display: flex;
+	justify-content: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	width: 1000px;
+	height: auto;
+	padding-top: 50px;
+	/* background-color: beige; */
+}
+
+/*===============================================
+global
+================================================*/
+.row {
+	margin-top: 0px;
+	margin-bottom: 5%;
+}
+.row>h5 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+.div {
+	width: 100px;
+	height: 100px;
+}
+
+.fx {
+	transition: all 0.5s;
+}
+
+/*===============================================
+divs
+================================================*/
+/* show hide div ------------------------------ */
+.div-1 {
+	width: 100px;
+	height: 0px;
+	background-color: burlywood;
+	/* transition: all 0.5s; */
+}
+
+/* change color ------------------------------- */
+.div-2 {
+	background-color: darkgoldenrod;
+}
+
+/* move div ----------------------------------- */
+.div-3-container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+.div-3-wrppr {
+	text-align: center;
+}
+.div-3 {
+	background-color: darkgreen;
+}
+
+/* Add Remove Border -------------------------- */
+.div-4 {
+	background-color: burlywood;
+	border: 0px solid #555555;
+}
+
+/* Add Remove Radius -------------------------- */
+.div-5 {
+	background-color: darkseagreen;
+}
+
+/* rotate dial ------------------------------ */
+.div-6-wrppr {
+	width: 200px;
+	height: auto;
+}
+.div-6-wrppr .dialbox {
+	min-height: 240px;
+	max-width: 220px;
+	background-color: #888;
+	padding: 20px;
+}
+.div-6-wrppr .display {
+	background-color: #555;
+	color: limegreen;
+	text-align: center;
+	width: 75px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.div-6-wrppr .dial {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	position: relative;
+	margin: auto;
+	background-color: #777;
+	box-shadow: inset 0px 0px 5px #222;
+}
+.div-6-wrppr .dial .dot {
+	width: 25px;
+	height: 25px;
+	border-radius: 100px;
+	position: absolute;
+	left: 41%;
+	top: 5%;
+	background-color: #777;
+	box-shadow: inset 0px 0px 5px #222;
+}
+.div-6-wrppr .dialbox .dial-cntrl {
+	margin: 15px auto 0px 35%;
+}
+.div-6-wrppr .dialbox .dial-cntrl button {
+	font-size: 20px;
+	background-color: #777;
+	color: #333;
+}
+/* show hide div ------------------------------ */
+.div-7-container {
+	width: 100%;
+	height: 115px;
+	background-color: burlywood;
+	position: relative;
+}
+.dir-pad-wrppr {
+	width: 100px;
+	height: auto;
+	margin-top: 20px;
+	margin: auto;
+	padding: 5px;
+	background-color: whitesmoke;
+	box-shadow: 0px 0px 5px #555;
+	transition: transform 5s;
+	/* z-index: 1; */
+	/* position: absolute; */
+	border-radius: 5px;
+}
+
+/* show hide div ------------------------------ */
+.div-8-wrppr .img-frme {
+	/*background-color: darkseagreen;*/
+	background-image: url(imgs/boat.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 200px;
+	/* transition: all 0.5s; */
+}
+
+.div-8-wrppr {
+	cursor: pointer;
+}
+
+/* add subtract div -------------------------- */
+#div-9-wrppr {
+	display: flex;
+}	
+#div-9-wrppr .div {
+	background-color: chocolate;
+	border: 1px solid #555;
+}
